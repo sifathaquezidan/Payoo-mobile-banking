@@ -13,7 +13,7 @@ document.getElementById('add-money').addEventListener('click', function(event){
         document.getElementById("main-balance").innerText = sum;
     }
     else{
-        console.log("Incorrect PIN")
+        alert("Incorrect PIN")
     }
 
 })

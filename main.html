@@ -22,11 +22,11 @@
                 <h1 class="text-2xl font-bold mb-2">Welcome to Payoo!</h1>
                 <p>Enjoy easy and convenient financial services with us. Cashout charge is low and</p>
                 <div class="cards grid grid-cols-3 mt-14 gap-2 p-2">
-                    <div class="box cursor-pointer border p-4 text-center rounded-sm">
+                    <div id="add-money-box" class="box cursor-pointer border p-4 text-center rounded-sm">
                         <img class="w-8 mx-auto" src="assets/wallet1.png" alt="">
                         <h3>Add Money</h3>
                     </div>
-                    <div class="box border p-4 text-center rounded-sm">
+                    <div id="cashout-box" class="box box cursor-pointer border p-4 text-center rounded-sm">
                         <img class="w-8 mx-auto" src="assets/purse1.png" alt="">
                         <h3>Cashout</h3>
                     </div>
@@ -49,8 +49,8 @@
                 </div>
 
                 <!-- Add money section -->
-                <section class="mt-10">
-                    <h2>Add Money</h2>
+                <section id="addmoney" class="mt-10">
+                    <h2 class="text-2xl font-bold">Add Money</h2>
                     <div class="">
                         <div class="hero-content flex-col lg:flex-row-reverse">
                           
@@ -94,9 +94,50 @@
                         </div>
                       </div>
                 </section>
+
+                <!-- Cashout section -->
+                <section id="cashout" class="mt-10">
+                    <h2 class="text-2xl font-bold">Cashout</h2>
+                    <div class="">
+                        <div class="hero-content flex-col lg:flex-row-reverse">
+                          
+                          <div class="card  w-full max-w-sm shrink-0 shadow-2xl">
+                            <form class="card-body">
+                                
+                                  <div class="form-control">
+                                    <label class="label">
+                                      <span class="label-text">Account Number</span>
+                                    </label>
+                                    <input value="01704703877" id="account-number" type="number" placeholder="Account" class="input input-bordered" required />
+                                    <label class="label">
+                                      <span class="label-text">Amount</span>
+                                    </label>
+                                    <input id="cashout-amount" type="number" placeholder="Type your amount" class="input input-bordered" required />
+                                    
+                                  </div>
+                                  <div class="form-control">
+                                    <label class="label">
+                                      <span class="label-text">Enter your PIN</span>
+                                    </label>
+                                    <input value="1234" id="cashout-pin" type="text" placeholder="PIN" class="input input-bordered" required />
+                                    <label class="label">
+                                      <a href="#" class="label-text-alt link link-hover">Forgot PIN?</a>
+                                    </label>
+                                  </div>
+                                  <div class="form-control mt-6">
+                                <button id="cashout-btn" class="btn btn-neutral bg-blue-700 border-none">Cashout</button>
+                              </div>
+                            </form>
+                          </div>
+                        </div>
+                      </div>
+                </section>
+
             </section>
         </header>
     </section>
     <script src="script/addMoney.js"></script>
+    <script src="script/toggle.js"></script>
+    <script src="script/cashout.js"></script>
 </body>
 </html>
