@@ -6,6 +6,7 @@ document.getElementById("cashout-btn").addEventListener("click", function (event
     const convertedCashoutAmount = parseFloat(cashoutAmount);
     const mainBalance = document.getElementById("main-balance").innerText;
     const convertedMainBalance = parseFloat(mainBalance);
+
     if (convertedPin===1234) {
         const sum = convertedMainBalance - convertedCashoutAmount;
         document.getElementById("main-balance").innerText = sum;
